@@ -14,7 +14,7 @@ struct LoginView: View {
     var body: some View {
         VStack {
             // Header
-            HeaderView()
+            HeaderView(title: "Список справ", subtitle: "пам'ятай про усі справи")
             // Login form
             Form {
                 TextField("Пошта", text: $email)

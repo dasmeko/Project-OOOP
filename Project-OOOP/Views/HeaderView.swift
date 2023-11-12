@@ -8,16 +8,19 @@
 import SwiftUI
 
 struct HeaderView: View {
+    let title: String
+    let subtitle: String
+
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 0).foregroundColor(Color.blue)
             
             VStack {
-                Text("Список справ")
+                Text(title)
                     .font(.system(size: 50))
                     .foregroundColor(Color.white)
                     .bold()
-                Text("пам'ятай про усі плани")
+                Text(subtitle)
                     .font(.system(size: 30))
                     .foregroundColor(Color.white)
             }
@@ -29,6 +32,6 @@ struct HeaderView: View {
 
 struct HeaderView_Previews: PreviewProvider {
     static var previews: some View {
-        HeaderView()
+        HeaderView(title: "hihi", subtitle: "hehe")
     }
 }
