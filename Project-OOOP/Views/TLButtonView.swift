@@ -22,6 +22,7 @@ struct TLButtonView: View {
                     Text(title).foregroundColor(Color.white).bold()
                 }
         }
+            .padding()
     }
 }
 

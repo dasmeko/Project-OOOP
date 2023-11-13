@@ -10,10 +10,10 @@ import SwiftUI
 struct HeaderView: View {
     let title: String
     let subtitle: String
-
+    let background: Color
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 0).foregroundColor(Color.blue)
+            RoundedRectangle(cornerRadius: 0).foregroundColor(background)
             
             VStack {
                 Text(title)
@@ -32,6 +32,6 @@ struct HeaderView: View {
 
 struct HeaderView_Previews: PreviewProvider {
     static var previews: some View {
-        HeaderView(title: "hihi", subtitle: "hehe")
+        HeaderView(title: "hihi", subtitle: "hehe", background: .brown)
     }
 }

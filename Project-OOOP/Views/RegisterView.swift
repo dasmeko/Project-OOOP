@@ -16,7 +16,7 @@ struct RegisterView: View {
     var body: some View {
         VStack {
             // Header
-            HeaderView(title:"Реєстрація", subtitle: "почни планувати вже зараз")
+            HeaderView(title:"Реєстрація", subtitle: "почни планувати вже зараз", background: .green)
             
             Form {
                 TextField("ПІБ", text: $name)
