@@ -21,15 +21,9 @@ struct LoginView: View {
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                 SecureField("Пароль", text: $password).textFieldStyle(RoundedBorderTextFieldStyle())
                 
-                Button {
-                   // Attempt log in
-                } label: {
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 10).foregroundColor(Color.blue)
-                        Text("Увійти").foregroundColor(Color.white).bold()
-                    }
+                TLButtonView(title: "Увійти", background: .blue) {
+                    // Attemp to log in
                 }
-
             }
             // Create accout
             VStack {

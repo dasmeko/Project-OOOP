@@ -8,10 +8,25 @@
 import SwiftUI
 
 struct RegisterView: View {
+    
+    @State var name = ""
+    @State var email = ""
+    @State var password = ""
+    
     var body: some View {
         VStack {
             // Header
             HeaderView(title:"Реєстрація", subtitle: "почни планувати вже зараз")
+            
+            Form {
+                TextField("ПІБ", text: $name)
+                TextField("Пошта", text: $email)
+                SecureField("Пароль", text: $password)
+                
+                TLButtonView(title: "Стоврити акаунт", background: .green) {
+                    // Attempt registration
+                }
+            }
             
             
             Spacer()

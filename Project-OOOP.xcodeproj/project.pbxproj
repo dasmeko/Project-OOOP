@@ -31,6 +31,7 @@
 		9A0595342AF79FBC00A8766B /* ToDoListItemViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0595332AF79FBC00A8766B /* ToDoListItemViewViewModel.swift */; };
 		9A0595362AF79FE000A8766B /* ToDoListViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0595352AF79FE000A8766B /* ToDoListViewViewModel.swift */; };
 		9A0595382B00D9A100A8766B /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0595372B00D9A100A8766B /* HeaderView.swift */; };
+		9A05953A2B026AF500A8766B /* TLButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0595392B026AF400A8766B /* TLButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		9A0595332AF79FBC00A8766B /* ToDoListItemViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListItemViewViewModel.swift; sourceTree = "<group>"; };
 		9A0595352AF79FE000A8766B /* ToDoListViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListViewViewModel.swift; sourceTree = "<group>"; };
 		9A0595372B00D9A100A8766B /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		9A0595392B026AF400A8766B /* TLButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 				9A05951D2ADC7D7000A8766B /* ToDoListView.swift */,
 				9A0595272AF79EBA00A8766B /* MainView.swift */,
 				9A0595372B00D9A100A8766B /* HeaderView.swift */,
+				9A0595392B026AF400A8766B /* TLButtonView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 				9A0595342AF79FBC00A8766B /* ToDoListItemViewViewModel.swift in Sources */,
 				9A05951E2ADC7D7000A8766B /* ToDoListView.swift in Sources */,
 				9A05952A2AF79F0800A8766B /* MainViewViewModel.swift in Sources */,
+				9A05953A2B026AF500A8766B /* TLButtonView.swift in Sources */,
 				9A05952E2AF79F5300A8766B /* NewItemViewViewModel.swift in Sources */,
 				9A0595322AF79F9400A8766B /* RegisterViewViewModel.swift in Sources */,
 				9A05951A2ADC7CD700A8766B /* RegisterView.swift in Sources */,
