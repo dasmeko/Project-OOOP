@@ -32,6 +32,7 @@
 		9A0595362AF79FE000A8766B /* ToDoListViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0595352AF79FE000A8766B /* ToDoListViewViewModel.swift */; };
 		9A0595382B00D9A100A8766B /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0595372B00D9A100A8766B /* HeaderView.swift */; };
 		9A05953A2B026AF500A8766B /* TLButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0595392B026AF400A8766B /* TLButtonView.swift */; };
+		9A05953C2B03D1CA00A8766B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A05953B2B03D1CA00A8766B /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		9A0595352AF79FE000A8766B /* ToDoListViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListViewViewModel.swift; sourceTree = "<group>"; };
 		9A0595372B00D9A100A8766B /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		9A0595392B026AF400A8766B /* TLButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLButtonView.swift; sourceTree = "<group>"; };
+		9A05953B2B03D1CA00A8766B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 				9A05950B2ADC269700A8766B /* GoogleService-Info.plist */,
 				9A0594F42AD4912C00A8766B /* Project_OOOPApp.swift */,
 				9A0594F82AD4912E00A8766B /* Assets.xcassets */,
+				9A05953B2B03D1CA00A8766B /* Extensions.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 				9A0595122ADC7C4700A8766B /* ProfileView.swift in Sources */,
 				9A0595242ADC7EA000A8766B /* User.swift in Sources */,
 				9A0595362AF79FE000A8766B /* ToDoListViewViewModel.swift in Sources */,
+				9A05953C2B03D1CA00A8766B /* Extensions.swift in Sources */,
 				9A05951C2ADC7D2600A8766B /* ToDoListItemView.swift in Sources */,
 				9A0594F52AD4912C00A8766B /* Project_OOOPApp.swift in Sources */,
 				9A0595262ADC7EB100A8766B /* ToDoListItem.swift in Sources */,
