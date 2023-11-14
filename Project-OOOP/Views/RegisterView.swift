@@ -9,15 +9,17 @@ import SwiftUI
 
 struct RegisterView: View {
     
+    @StateObject var viewModel = RegisterViewViewModel()
+    
     var body: some View {
         VStack {
             // Header
             HeaderView(title:"Реєстрація", subtitle: "почни планувати вже зараз", background: .green)
             
             Form {
-                TextField("ПІБ", text: $name).autocorrectionDisabled()
-                TextField("Пошта", text: $email).textInputAutocapitalization(.none).autocorrectionDisabled()
-                SecureField("Пароль", text: $password)
+                TextField("ПІБ", text: $viewModel.name).autocorrectionDisabled()
+                TextField("Пошта", text: $viewModel.email).textInputAutocapitalization(.none).autocorrectionDisabled()
+                SecureField("Пароль", text: $viewModel.password)
                 
                 TLButtonView(title: "Створити акаунт", background: .green) {
                     // Attempt registration
