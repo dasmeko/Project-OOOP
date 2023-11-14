@@ -13,7 +13,7 @@ class RegisterViewViewModel: ObservableObject {
     @Published var name = ""
     @Published var email = ""
     @Published var password = ""
-    
+    @Published var password2 = ""
     init () {}
     
     func register() {
@@ -48,6 +48,11 @@ class RegisterViewViewModel: ObservableObject {
         guard password.count >= 8 else {
             return false
         }
+        
+        guard password == password2 else {
+            return false
+        }
         return true
+        
     }
 }
