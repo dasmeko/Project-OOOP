@@ -23,7 +23,7 @@ struct RegisterView: View {
                 TextField("Пошта", text: $email).textInputAutocapitalization(.none).autocorrectionDisabled()
                 SecureField("Пароль", text: $password)
                 
-                TLButtonView(title: "Стоврити акаунт", background: .green) {
+                TLButtonView(title: "Створити акаунт", background: .green) {
                     // Attempt registration
                 }
             }

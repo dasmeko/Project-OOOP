@@ -15,13 +15,18 @@ struct LoginView: View {
             // Header
             HeaderView(title: "Список справ", subtitle: "пам'ятай про усі справи", background: .blue)
             // Login form
+            
+            if !viewModel.errorMessage.isEmpty {
+                Text(viewModel.errorMessage).foregroundColor(Color.red)
+            }
+            
             Form {
                 TextField("Пошта", text: $viewModel.email)
                     .textFieldStyle(RoundedBorderTextFieldStyle()).textInputAutocapitalization(.none).autocorrectionDisabled()
                 SecureField("Пароль", text: $viewModel.password).textFieldStyle(RoundedBorderTextFieldStyle())
                 
                 TLButtonView(title: "Увійти", background: .blue) {
-                    // Attemp to log in
+                    viewModel.login()
                 }
             }
             // Create accout
