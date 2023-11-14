@@ -19,8 +19,8 @@ struct RegisterView: View {
             HeaderView(title:"Реєстрація", subtitle: "почни планувати вже зараз", background: .green)
             
             Form {
-                TextField("ПІБ", text: $name)
-                TextField("Пошта", text: $email)
+                TextField("ПІБ", text: $name).autocorrectionDisabled()
+                TextField("Пошта", text: $email).textInputAutocapitalization(.none).autocorrectionDisabled()
                 SecureField("Пароль", text: $password)
                 
                 TLButtonView(title: "Стоврити акаунт", background: .green) {

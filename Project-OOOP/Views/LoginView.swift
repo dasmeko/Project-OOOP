@@ -8,18 +8,17 @@
 import SwiftUI
 
 struct LoginView: View {
-    @State var email = ""
-    @State var password = ""
+    @StateObject var viewModel = LoginViewViewModel()
     
     var body: some View {
         VStack {
             // Header
-            HeaderView(title: "Список справ", subtitle: "пам'ятай про усі справи")
+            HeaderView(title: "Список справ", subtitle: "пам'ятай про усі справи", background: .blue)
             // Login form
             Form {
-                TextField("Пошта", text: $email)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                SecureField("Пароль", text: $password).textFieldStyle(RoundedBorderTextFieldStyle())
+                TextField("Пошта", text: $viewModel.email)
+                    .textFieldStyle(RoundedBorderTextFieldStyle()).textInputAutocapitalization(.none).autocorrectionDisabled()
+                SecureField("Пароль", text: $viewModel.password).textFieldStyle(RoundedBorderTextFieldStyle())
                 
                 TLButtonView(title: "Увійти", background: .blue) {
                     // Attemp to log in
