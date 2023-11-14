@@ -32,8 +32,10 @@ struct LoginView: View {
             // Create accout
             VStack {
                 Text("Ще не зареєстровані?")
-                NavigationLink("Створити акаунт", destination: RegisterView())
-            }
+                NavigationLink("Створити аккаунт") {
+                    RegisterView()
+                }
+                }
             .padding(.bottom, 40)
             Spacer()
         }
