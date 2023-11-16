@@ -15,7 +15,16 @@ struct MainView: View {
         NavigationView {
             if viewModel.isSignedIn, !viewModel.currentUserId.isEmpty {
                 // signed in
-                ToDoListView()
+                TabView {
+                    ToDoListView().tabItem {
+                        Label("Головна", systemImage: "house")
+                    }
+                    
+                    ProfileView().tabItem {
+                        Label("Профіль", systemImage: "person.circle")
+                    }
+                    
+                }
             } else {
                 LoginView()
             }
