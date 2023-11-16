@@ -21,7 +21,9 @@ struct ToDoListView: View {
     var body: some View {
         NavigationView {
             VStack {
-                
+                List(items) { item in
+                    Text(item.title)
+                }.listStyle(PlainListStyle())
             }
             .navigationTitle("Список ваших справ")
             .toolbar {
