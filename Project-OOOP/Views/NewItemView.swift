@@ -10,6 +10,7 @@ import SwiftUI
 struct NewItemView: View {
     
     @StateObject var viewModel = NewItemViewViewModel()
+    @Binding var newItemPresented: Bool
     
     var body: some View {
         VStack {
@@ -29,10 +30,18 @@ struct NewItemView: View {
                 
                 // Button
                 TLButtonView(title: "Зберегти", background: .pink) {
-                    viewModel.save()
+                    if viewModel.canSave {
+                        viewModel.save()
+                        newItemPresented = false
+                    } else {
+                        viewModel.showAlert = true
+                    }
                 }
                 .padding()
                 
+            }
+            .alert(isPresented: $viewModel.showAlert) {
+                Alert(title: Text("Помилка"), message: Text("Введіть не пусту назву та оберіть дату не ранішу, аніж сьогодні."))
             }
         }
     }
@@ -40,6 +49,10 @@ struct NewItemView: View {
 
 struct NewItemView_Previews: PreviewProvider {
     static var previews: some View {
-        NewItemView()
+        NewItemView(newItemPresented: Binding(get: {
+            return true
+        }, set: { _ in
+            
+        }))
     }
 }
