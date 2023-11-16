@@ -16,6 +16,7 @@ struct NewItemView: View {
             Text("Додати нове завдання")
                 .font(.system(size: 32))
                 .bold()
+                .padding(.top, 100)
             
             
             Form {
