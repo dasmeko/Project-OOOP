@@ -22,7 +22,7 @@ struct ToDoListView: View {
         NavigationView {
             VStack {
                 List(items) { item in
-                    Text(item.title)
+                    ToDoListItemView(item: item)
                 }.listStyle(PlainListStyle())
             }
             .navigationTitle("Список ваших справ")
