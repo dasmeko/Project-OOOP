@@ -20,34 +20,39 @@ struct ProfileView: View {
                     .aspectRatio(contentMode: .fit)
                     .foregroundColor(Color.blue)
                     .frame(width: 125, height: 125)
+                    .padding()
                 // info
                 VStack(alignment: .leading) {
                     
                     HStack {
-                        Text("Ім'я: ")
+                        Text("Ім'я: ").bold()
                         Text("Дар'я Бабенко")
-                    }
+                    }.padding()
                     
                     HStack {
-                        Text("Пошта: ")
+                        Text("Пошта: ").bold()
                         Text("dashadadaday@gmail.com")
                     }
-                    
+                    .padding()
                     HStack {
-                        Text("Дата реєстрації: ")
+                        Text("Дата реєстрації: ").bold()
                         Text("10.10.2023")
-                    }
+                    }.padding()
                     
                 }
+                .padding()
                 // sign out
                 
-                TLButtonView(title: "Вийти", background: .red) {
+                Button("Вийти") {
                     viewModel.logOut()
-                }
+                }.tint(Color.red)
+                    .padding()
+                    
             }
             .navigationTitle("Профіль")
             
         }
+        
     }
 }
 
