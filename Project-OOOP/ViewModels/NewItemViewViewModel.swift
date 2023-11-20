@@ -13,6 +13,7 @@ class NewItemViewViewModel: ObservableObject {
     @Published var title = ""
     @Published var dueDate = Date()
     @Published var showAlert = false
+    @Published var errorMessage = ""
     
     init() {}
     
@@ -47,11 +48,14 @@ class NewItemViewViewModel: ObservableObject {
     }
     
     var canSave: Bool {
+        errorMessage = ""
         guard !title.trimmingCharacters(in: .whitespaces).isEmpty else {
+            errorMessage = "Введіть, будь ласка, не пусту назву."
             return false
         }
         
         guard dueDate >= Date().addingTimeInterval(-86400) else {
+            errorMessage = "Оберіть дату не ранішу за сьогодні."
             return false
         }
         

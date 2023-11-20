@@ -41,7 +41,7 @@ struct NewItemView: View {
                 
             }
             .alert(isPresented: $viewModel.showAlert) {
-                Alert(title: Text("Помилка"), message: Text("Введіть не пусту назву та оберіть дату не ранішу, аніж сьогодні."))
+                Alert(title: Text("Помилка"), message: Text(viewModel.errorMessage))
             }
         }
     }
