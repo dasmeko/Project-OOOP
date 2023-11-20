@@ -23,6 +23,7 @@ struct RegisterView: View {
                 SecureField("Підтведити пароль", text: $viewModel.password2)
                 TLButtonView(title: "Створити акаунт", background: .green) {
                     viewModel.register()
+                    
                 }
             }
             
