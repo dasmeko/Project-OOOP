@@ -14,6 +14,7 @@ class RegisterViewViewModel: ObservableObject {
     @Published var email = ""
     @Published var password = ""
     @Published var password2 = ""
+    @Published var errorMessage = ""
     init () {}
     
     func register() {
@@ -38,19 +39,28 @@ class RegisterViewViewModel: ObservableObject {
     }
     
     private func validate() -> Bool {
+        errorMessage = ""
         guard !name.trimmingCharacters(in: .whitespaces).isEmpty,  !email.trimmingCharacters(in: .whitespaces).isEmpty,                    !password.trimmingCharacters(in: .whitespaces).isEmpty else {
+            errorMessage = "Поля мають бути не пустими"
             return false
+            
         }
         guard email.contains("@") && email.contains(".") else {
+            errorMessage = "Введіть правильну пошту"
             return false
+            
         }
         
         guard password.count >= 8 else {
+            errorMessage = "Пароль має містити більше 8 символів"
             return false
+            
         }
         
         guard password == password2 else {
+            errorMessage = "Паролі не співпадають"
             return false
+            
         }
         return true
         

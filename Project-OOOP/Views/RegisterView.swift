@@ -16,6 +16,11 @@ struct RegisterView: View {
             // Header
             HeaderView(title:"Реєстрація", subtitle: "почни планувати вже зараз", background: .green)
             
+            
+            if !viewModel.errorMessage.isEmpty {
+                Text(viewModel.errorMessage).foregroundColor(Color.red)
+            }
+            
             Form {
                 TextField("ПІБ", text: $viewModel.name).autocorrectionDisabled()
                 TextField("Пошта", text: $viewModel.email).textInputAutocapitalization(.none).autocorrectionDisabled()
